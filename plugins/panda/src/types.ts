@@ -26,6 +26,12 @@ export const borderRadii = ['none', 'xs', 'sm', 'md', 'lg', 'xl', '2xl'] as cons
 
 export type AccentColor = (typeof accentColors)[number]
 export const accentColors = [
+  'bluePalette',
+  'grayPalette',
+  'greenPalette',
+  'orangePalette',
+  'pinkPalette',
+  'redPalette',
   'neutral',
   'tomato',
   'red',

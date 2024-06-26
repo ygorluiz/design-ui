@@ -1,12 +1,15 @@
 import { amber } from './amber'
 import { blue } from './blue'
+import { bluePalette } from './bluePalette'
 import { bronze } from './bronze'
 import { brown } from './brown'
 import { crimson } from './crimson'
 import { cyan } from './cyan'
 import { gold } from './gold'
 import { grass } from './grass'
+import { grayPalette } from './grayPalette'
 import { green } from './green'
+import { greenPalette } from './greenPalette'
 import { indigo } from './indigo'
 import { iris } from './iris'
 import { jade } from './jade'
@@ -16,10 +19,13 @@ import { mint } from './mint'
 import { neutral } from './neutral'
 import { olive } from './olive'
 import { orange } from './orange'
+import { orangePalette } from './orangePallete'
 import { pink } from './pink'
+import { pinkPalette } from './pinkPalette'
 import { plum } from './plum'
 import { purple } from './purple'
 import { red } from './red'
+import { redPalette } from './redPalette'
 import { ruby } from './ruby'
 import { sage } from './sage'
 import { sand } from './sand'
@@ -31,6 +37,12 @@ import { violet } from './violet'
 import { yellow } from './yellow'
 
 export const colors = {
+  bluePalette,
+  grayPalette,
+  greenPalette,
+  orangePalette,
+  pinkPalette,
+  redPalette,
   amber,
   blue,
   bronze,

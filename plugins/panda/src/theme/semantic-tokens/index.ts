@@ -24,13 +24,25 @@ export const createSemanticTokens = (options: PresetOptions) => {
       ...extraColors,
       gray: colors[grayColor],
       accent: colors[accentColor],
+
       bg: {
-        canvas: { value: '{colors.gray.1}' },
+        canvas: {
+          value: {
+            base: 'oklch(99.24% 0.008 266)',
+            _dark: 'oklch(18.68% 0.01 266)',
+          },
+        },
         default: { value: { base: 'white', _dark: '{colors.gray.2}' } },
-        subtle: { value: { base: '{colors.gray.2}', _dark: '{colors.gray.3}' } },
+        subtle: {
+          value: { base: '{colors.gray.2}', _dark: '{colors.gray.3}' },
+        },
         muted: { value: { base: '{colors.gray.3}', _dark: '{colors.gray.4}' } },
-        emphasized: { value: { base: '{colors.gray.4}', _dark: '{colors.gray.5}' } },
-        disabled: { value: { base: '{colors.gray.3}', _dark: '{colors.gray.4}' } },
+        emphasized: {
+          value: { base: '{colors.gray.4}', _dark: '{colors.gray.5}' },
+        },
+        disabled: {
+          value: { base: '{colors.gray.3}', _dark: '{colors.gray.4}' },
+        },
       },
       fg: {
         default: { value: '{colors.gray.12}' },

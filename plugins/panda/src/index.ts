@@ -19,7 +19,14 @@ import {
 
 const defaultOptions: PresetOptions = {
   accentColor: 'neutral',
-  additionalColors: [],
+  additionalColors: [
+    'bluePalette',
+    'grayPalette',
+    'greenPalette',
+    'orangePalette',
+    'pinkPalette',
+    'redPalette',
+  ],
   borderRadius: 'sm',
   grayColor: 'neutral',
 }
