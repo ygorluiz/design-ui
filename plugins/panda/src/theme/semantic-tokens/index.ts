@@ -57,7 +57,6 @@ export const createSemanticTokens = (options: PresetOptions) => {
         disabled: { value: '{colors.gray.5}' },
         outline: { value: '{colors.gray.a9}' },
       },
-
       /*
       custom colors
       */
@@ -92,57 +91,65 @@ export const createSemanticTokens = (options: PresetOptions) => {
         },
       },
       danger: {
-        value: {
-          base: '{colors.redPalette.9}',
-          _dark: '{colors.redPalette.10}',
+        default: {
+          value: {
+            base: '{colors.redPalette.9}',
+            _dark: '{colors.redPalette.10}',
+          },
         },
-      },
-      dangerEmphasis: {
-        value: {
-          base: 'oklch(from {colors.redPalette.7} l c h / 10%)',
-          _dark: 'oklch(from {colors.redPalette.10} l c h / 10%)',
+        emphasis: {
+          value: {
+            base: 'oklch(from {colors.redPalette.7} l c h / 10%)',
+            _dark: 'oklch(from {colors.redPalette.10} l c h / 10%)',
+          },
         },
       },
       warning: {
-        value: {
-          base: '{colors.orangePalette.11}',
-          _dark: '{colors.orangePalette.10}',
+        default: {
+          value: {
+            base: '{colors.orangePalette.11}',
+            _dark: '{colors.orangePalette.10}',
+          },
         },
-      },
-      warningEmphasis: {
-        value: {
-          base: 'oklch(from {colors.orangePalette.11} l c h / 7%)',
-          _dark: 'oklch(from {colors.orangePalette.10} l c h / 10%)',
+        emphasis: {
+          value: {
+            base: 'oklch(from {colors.orangePalette.11} l c h / 7%)',
+            _dark: 'oklch(from {colors.orangePalette.10} l c h / 10%)',
+          },
         },
       },
       success: {
-        value: {
-          base: '{colors.greenPalette.11}',
-          _dark: '{colors.greenPalette.9}',
+        default: {
+          value: {
+            base: '{colors.greenPalette.11}',
+            _dark: '{colors.greenPalette.9}',
+          },
+        },
+        emphasis: {
+          value: {
+            base: 'oklch(from {colors.greenPalette.9} l c h / 10%)',
+            _dark: 'oklch(from {colors.greenPalette.9} l c h / 10%)',
+          },
         },
       },
-      successEmphasis: {
-        value: {
-          base: 'oklch(from {colors.greenPalette.9} l c h / 10%)',
-          _dark: 'oklch(from {colors.greenPalette.9} l c h / 10%)',
+      text: {
+        default: {
+          value: {
+            base: '{colors.grayPalette.12}',
+            _dark: '{colors.grayPalette.4}',
+          },
         },
-      },
-      textPrimary: {
-        value: {
-          base: '{colors.grayPalette.12}',
-          _dark: '{colors.grayPalette.4}',
+        secondary: {
+          value: {
+            base: 'var(--gray1100)',
+            _dark: 'var(--gray1100)',
+          },
         },
-      },
-      textSecondary: {
-        value: {
-          base: 'var(--gray1100)',
-          _dark: 'var(--gray1100)',
-        },
-      },
-      textTertiary: {
-        value: {
-          base: '{colors.grayPalette.10}',
-          _dark: '{colors.grayPalette.10}',
+        tertiary: {
+          value: {
+            base: '{colors.grayPalette.10}',
+            _dark: '{colors.grayPalette.10}',
+          },
         },
       },
       borderColor: {
