@@ -24,13 +24,25 @@ export const createSemanticTokens = (options: PresetOptions) => {
       ...extraColors,
       gray: colors[grayColor],
       accent: colors[accentColor],
+
       bg: {
-        canvas: { value: '{colors.gray.1}' },
+        canvas: {
+          value: {
+            base: 'oklch(99.24% 0.008 266)',
+            _dark: 'oklch(18.68% 0.01 266)',
+          },
+        },
         default: { value: { base: 'white', _dark: '{colors.gray.2}' } },
-        subtle: { value: { base: '{colors.gray.2}', _dark: '{colors.gray.3}' } },
+        subtle: {
+          value: { base: '{colors.gray.2}', _dark: '{colors.gray.3}' },
+        },
         muted: { value: { base: '{colors.gray.3}', _dark: '{colors.gray.4}' } },
-        emphasized: { value: { base: '{colors.gray.4}', _dark: '{colors.gray.5}' } },
-        disabled: { value: { base: '{colors.gray.3}', _dark: '{colors.gray.4}' } },
+        emphasized: {
+          value: { base: '{colors.gray.4}', _dark: '{colors.gray.5}' },
+        },
+        disabled: {
+          value: { base: '{colors.gray.3}', _dark: '{colors.gray.4}' },
+        },
       },
       fg: {
         default: { value: '{colors.gray.12}' },
@@ -45,6 +57,9 @@ export const createSemanticTokens = (options: PresetOptions) => {
         disabled: { value: '{colors.gray.5}' },
         outline: { value: '{colors.gray.a9}' },
       },
+      /*
+      custom colors
+      */
       accents: {
         value: {
           base: '{colors.bluePalette.9}',
@@ -59,19 +74,19 @@ export const createSemanticTokens = (options: PresetOptions) => {
       },
       header: {
         value: {
-          base: 'oklch(from oklch(99.24% 0.008 266) l c h / 40%)',
-          _dark: 'oklch(from oklch(18.68% 0.01 266) l c h / 40%)',
+          base: 'oklch(from {colors.grayPalette.1} l c h / 40%)',
+          _dark: 'oklch(from {colors.grayPalette.1} l c h / 40%)',
         },
       },
       emphasis: {
         value: {
-          base: 'oklch(from oklch(55.52% 0.223 266) l c h / 5%)',
-          _dark: 'oklch(from oklch(64.6% 0.172 266) l c h / 7%)',
+          base: 'oklch(from {colors.bluePalette.9} l c h / 5%)',
+          _dark: 'oklch(from {colors.bluePalette.8} l c h / 7%)',
         },
       },
       foreground: {
         value: {
-          base: 'oklch(from oklch(98.08% 0.008 266) l c h / 100%)',
+          base: 'oklch( from {colors.grayPalette.2} l c h / 100%)',
           _dark: '{colors.grayPalette.3}',
         },
       },
@@ -84,8 +99,8 @@ export const createSemanticTokens = (options: PresetOptions) => {
         },
         emphasis: {
           value: {
-            base: 'oklch(from oklch(74.19% 0.138 22) l c h / 10%)',
-            _dark: 'oklch(from oklch(64.51% 0.204 22) l c h / 10%)',
+            base: 'oklch(from {colors.redPalette.7} l c h / 10%)',
+            _dark: 'oklch(from {colors.redPalette.10} l c h / 10%)',
           },
         },
       },
@@ -98,8 +113,8 @@ export const createSemanticTokens = (options: PresetOptions) => {
         },
         emphasis: {
           value: {
-            base: 'oklch(from oklch(54.63% 0.140 60) l c h / 7%)',
-            _dark: 'oklch(from oklch(76.91% 0.165 60) l c h / 10%)',
+            base: 'oklch(from {colors.orangePalette.11} l c h / 7%)',
+            _dark: 'oklch(from {colors.orangePalette.10} l c h / 10%)',
           },
         },
       },
@@ -112,8 +127,8 @@ export const createSemanticTokens = (options: PresetOptions) => {
         },
         emphasis: {
           value: {
-            base: 'oklch(from oklch(88.54% 0.19 170) l c h / 10%)',
-            _dark: 'oklch(from oklch(86.02% 0.176 170) l c h / 10%)',
+            base: 'oklch(from {colors.greenPalette.9} l c h / 10%)',
+            _dark: 'oklch(from {colors.greenPalette.9} l c h / 10%)',
           },
         },
       },
@@ -126,8 +141,8 @@ export const createSemanticTokens = (options: PresetOptions) => {
         },
         secondary: {
           value: {
-            base: '{colors.grayPalette.11}',
-            _dark: '{colors.grayPalette.11}',
+            base: 'var(--gray1100)',
+            _dark: 'var(--gray1100)',
           },
         },
         tertiary: {
@@ -192,7 +207,7 @@ export const createSemanticTokens = (options: PresetOptions) => {
           value: { base: '{colors.grayPalette.10}', _dark: '{colors.orangePalette.12}' },
         },
         keyword: {
-          value: { base: '{colors.bluePalette.10}', _dark: '{colors.bluePalette.7}' },
+          value: { base: '{colors.bluePalette.10}', _dark: '{{colors.bluePalette.7}' },
         },
         function: {
           value: { base: '{colors.pinkPalette.10}', _dark: '{colors.pinkPalette.4}' },
