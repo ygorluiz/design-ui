@@ -10,6 +10,10 @@ export const accordion = defineSlotRecipe({
       width: 'full',
       borderTopWidth: '1px',
       borderBottomWidth: '1px',
+      borderColor: 'borderColor',
+    },
+    item: {
+      borderColor: 'borderColor',
     },
     itemTrigger: {
       alignItems: 'center',
