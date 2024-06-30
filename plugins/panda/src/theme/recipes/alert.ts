@@ -5,7 +5,8 @@ export const alert = defineSlotRecipe({
   slots: ['root', 'content', 'description', 'icon', 'title'],
   base: {
     root: {
-      background: 'bg.default',
+      background: 'cardBackgroundColor',
+      borderColor: 'borderColor',
       borderWidth: '1px',
       borderRadius: 'l3',
       display: 'flex',
